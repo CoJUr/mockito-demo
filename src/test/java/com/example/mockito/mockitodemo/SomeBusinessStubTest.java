@@ -6,20 +6,15 @@ import org.junit.jupiter.api.Test;
 //import com.example.mockito.mockitodemo.model.Item;
 
 public class SomeBusinessStubTest {
-
     @Test
     public void testFindTheGreatestFromAllData() {
         SomeBusinessImpl businessImpl = new SomeBusinessImpl(new DataServiceStub());
         int result = businessImpl.findTheGreatestFromAllData();
-        asseertEquals(24, result);
+        assertEquals(24, result);
     }
-
 }
 
 
-
-
-}
 
 //create a stub data service
 class DataServiceStub implements DataService {
